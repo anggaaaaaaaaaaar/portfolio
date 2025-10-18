@@ -12,7 +12,7 @@ I like solving problems, learning new things, and building software that makes l
 ### 🔹 Avantrade – Wealth Management System  
 **Period:** Apr 2023 – Present  
 **Company:** PT. Indivara Group  
-**Role:** Product Specialist (previously Frontend Developer)  
+**Role:** Product Specialist
 **Tech Stack:** React.js, TailwindCSS, Redux Toolkit, TypeScript, Spring Boot, OracleDB, GitLab CI/CD
 
 **Description:**  
