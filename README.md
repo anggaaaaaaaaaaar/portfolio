@@ -23,8 +23,10 @@ An integrated Wealth Management application offering services such as Investment
 - Designed and implemented RESTful APIs with Spring Boot.  
 - Applied CI/CD pipelines using GitLab CI to accelerate deployment.  
 - Collaborated cross-functionally with Business Analysts, QA, Backend, and UI/UX teams.  
-- Created automation scripts for data and system migration to reduce manual effort.
-
+- Created automation scripts for data and system migration to reduce manual effort
+- Create TSD
+- Create backup & restore database script to easier data testing
+  
 ---
 
 ### 🔹 Internal Investment Tool – PT. Bahana Sekuritas  
