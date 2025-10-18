@@ -1,6 +1,11 @@
 # 👋 Hi, I'm Anggar Pujianto
 
-## 💼 Portfolio – Software Developer
+## About Me
+I’m a Software Developer who enjoys working across the stack from building clean, responsive UIs with React.js, to developing reliable backend services with Java Spring Boot. Most of my day-to-day involves fixing bugs, improving features, deploying apps to servers, and checking logs to keep everything running smoothly.
+
+I like solving problems, learning new things, and building software that makes life easier for users
+
+## 💼 Portfolio
 
 ---
 
