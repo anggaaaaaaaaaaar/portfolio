@@ -1,5 +1,7 @@
-// Regenerates assets/og.png and assets/Anggar-Pujianto-CV.pdf.
-// Run after editing index.html: node scripts/render.js (needs Playwright with Chromium).
+// Regenerates assets/og.png and assets/Anggar-Pujianto-CV.pdf (from cv.html).
+// Run after editing cv.html: node scripts/render.js (needs Playwright with Chromium).
+// For a private copy with a phone number, which stays out of the repo:
+//   CV_PHONE="08xx..." CV_OUT=/some/path.pdf node scripts/render.js
 const path = require('path');
 const { chromium } = require('playwright');
 
@@ -14,13 +16,17 @@ const url = (file) => 'file://' + path.join(root, file);
   await og.screenshot({ path: path.join(root, 'assets/og.png') });
 
   const cv = await browser.newPage();
-  await cv.goto(url('index.html'));
-  await cv.emulateMedia({ media: 'print', colorScheme: 'light' });
+  await cv.goto(url('cv.html'));
+  if (process.env.CV_PHONE) {
+    await cv.evaluate((phone) => {
+      const el = document.querySelector('.phone');
+      el.textContent = phone;
+      el.hidden = false;
+    }, process.env.CV_PHONE);
+  }
   await cv.pdf({
-    path: path.join(root, 'assets/Anggar-Pujianto-CV.pdf'),
-    format: 'A4',
-    margin: { top: '16mm', bottom: '16mm', left: '18mm', right: '18mm' },
-    printBackground: false,
+    path: process.env.CV_OUT || path.join(root, 'assets/Anggar-Pujianto-CV.pdf'),
+    preferCSSPageSize: true,
   });
 
   await browser.close();
