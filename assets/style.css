@@ -1,0 +1,107 @@
+:root {
+  --bg: #fbfaf7;
+  --text: #1d1d1b;
+  --muted: #66645e;
+  --line: #e4e1d9;
+  --link: #1f5f8b;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161615;
+    --text: #e8e6e1;
+    --muted: #9b988f;
+    --line: #2f2e2b;
+    --link: #8cc3e8;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0 auto;
+  max-width: 44rem;
+  padding: 4rem 1.25rem 3rem;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 Charter, "Bitstream Charter", "Iowan Old Style", Georgia, serif;
+}
+
+h1, h2, h3, h4, .role, .when, .stack, .links, dt {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+h1 { font-size: 2rem; margin: 0; line-height: 1.2; }
+h2 {
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--muted);
+  margin: 3.5rem 0 1.25rem;
+  padding-bottom: .4rem;
+  border-bottom: 1px solid var(--line);
+}
+h3 { font-size: 1.05rem; margin: 0; }
+h4 { font-size: .95rem; margin: 0 0 .2rem; }
+
+a { color: var(--link); text-underline-offset: 2px; }
+
+.role { color: var(--muted); margin: .25rem 0 1.5rem; }
+
+.links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.5rem;
+  font-size: .95rem;
+}
+
+.job { margin-bottom: 2.5rem; }
+.job-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.when { color: var(--muted); font-size: .85rem; font-weight: normal; margin: 0; white-space: nowrap; }
+h4 .when { margin-left: .5rem; }
+.what { color: var(--muted); margin: .25rem 0 .5rem; }
+
+ul { padding-left: 1.2rem; margin: .5rem 0; }
+li { margin-bottom: .3rem; }
+ul.plain { list-style: none; padding: 0; }
+
+.stack { font-size: .85rem; color: var(--muted); margin: .5rem 0 0; }
+
+.project { margin: 1rem 0 0; }
+.project p { margin: 0; }
+
+.skills {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: .5rem 1rem;
+  margin: 0;
+}
+.skills dt { font-size: .9rem; font-weight: 600; padding-top: .1rem; }
+.skills dd { margin: 0; }
+
+footer {
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+}
+
+@media (max-width: 30rem) {
+  body { padding-top: 2.5rem; font-size: 16px; }
+  .skills { grid-template-columns: 1fr; gap: 0; }
+  .skills dd { margin-bottom: .75rem; }
+}
+
+@media print {
+  body { padding: 0; max-width: none; }
+  a { color: inherit; }
+}
