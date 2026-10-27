@@ -1,5 +1,7 @@
 # 👋 Hi, I'm Anggar Pujianto
 
+**Website:** [anggaaaaaaaaaaar.github.io/portfolio](https://anggaaaaaaaaaaar.github.io/portfolio/) · **CV (PDF):** [download](https://anggaaaaaaaaaaar.github.io/portfolio/assets/Anggar-Pujianto-CV.pdf)
+
 ## About Me
 I’m a Software Developer who enjoys working across the stack from building clean, responsive UIs with React.js, to developing reliable backend services with Java Spring Boot. Most of my day-to-day involves fixing bugs, improving features, deploying apps to servers, and checking logs to keep everything running smoothly.
 
@@ -94,6 +96,7 @@ A marketplace website that simplifies transactions by allowing users to order go
 
 - 📧 Email: anggarpujianto3@gmail.com  
 - 💼 LinkedIn: [Anggar Pujianto](https://www.linkedin.com/in/anggar-pujianto-511569275)  
+- 🌐 Website: [anggaaaaaaaaaaar.github.io/portfolio](https://anggaaaaaaaaaaar.github.io/portfolio/)  
 - 💻 GitHub: [Anggar@Github](https://github.com/anggaaaaaaaaaaar)  
 
 ---
