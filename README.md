@@ -1,101 +1,90 @@
-# 👋 Hi, I'm Anggar Pujianto
+# Anggar Pujianto
 
-## About Me
-I’m a Software Developer who enjoys working across the stack from building clean, responsive UIs with React.js, to developing reliable backend services with Java Spring Boot. Most of my day-to-day involves fixing bugs, improving features, deploying apps to servers, and checking logs to keep everything running smoothly.
+Software developer in Jakarta. React on the frontend, Java Spring Boot on the backend, mostly on wealth management and payment systems.
 
-I like solving problems, learning new things, and building software that makes life easier for users
+**Website:** [anggaaaaaaaaaaar.github.io/portfolio](https://anggaaaaaaaaaaar.github.io/portfolio/)  
+**CV (PDF):** [Anggar-Pujianto-CV.pdf](https://anggaaaaaaaaaaar.github.io/portfolio/assets/Anggar-Pujianto-CV.pdf)  
+**Email:** [anggarpujianto3@gmail.com](mailto:anggarpujianto3@gmail.com)  
+**LinkedIn:** [anggar-pujianto-511569275](https://www.linkedin.com/in/anggar-pujianto-511569275)
 
-## 💼 Portfolio
+## About
 
----
+I build web apps end to end. Day to day that means building features and fixing bugs across the stack, deploying to servers, and reading logs to keep things running. I have 6 years of experience, most of it in financial services, including two years as a QA tester.
 
-### 🔹 Avantrade – Wealth Management System  
-**Period:** Apr 2023 – Present  
-**Company:** PT. Indivara Group  
-**Role:** Product Specialist
-**Tech Stack:** React.js, TailwindCSS, Redux Toolkit, TypeScript, Spring Boot, OracleDB, GitLab CI/CD
+## Experience
 
-**Description:**  
-An integrated Wealth Management application offering services such as Investment Management, Asset Management, and more. An enterprise-level project used by financial institutions.
+### Avantrade, wealth management system · PT Indivara Group
 
-**Contributions:**  
-- Developed the frontend from scratch using React, Redux Toolkit, and Tailwind CSS.  
-- Designed and implemented RESTful APIs with Spring Boot.  
-- Applied CI/CD pipelines using GitLab CI to accelerate deployment.  
-- Collaborated cross-functionally with Business Analysts, QA, Backend, and UI/UX teams.  
-- Created automation scripts for data and system migration to reduce manual effort
-- Create TSD
-- Create backup & restore database script to easier data testing
-  
----
+Product Specialist (Jul 2024 – present) · Frontend Developer (Apr 2023 – Jan 2024)
 
-### 🔹 Internal Investment Tool – PT. Bahana Sekuritas  
-**Period:** Dec 2022 – Aug 2023  
-**Role:** Frontend Developer (Part-Time)  
-**Tech Stack:** React.js, Redux Toolkit, Ant Design
+An integrated wealth management platform used by financial institutions for investment and asset management.
 
-**Description:**  
-An internal tool to monitor investments, profit and loss projections, and portfolio management.
+- Delivered eKYC (electronic Know Your Customer), speeding up user onboarding and reducing manual verification for the operations team.
+- Built the payment module with digital wallet integration, designed so new wallet providers plug in with minimal code changes.
+- Built the frontend from scratch with React, TypeScript, Redux Toolkit and Tailwind CSS.
+- Developed Spring Boot services and REST APIs that connect multiple internal systems.
+- Set up CI/CD with Jenkins and GitLab CI, and wrote scripts to automate data migration and database backup and restore for testing.
+- Wrote technical specification documents (TSD) and worked with business analysts, QA, backend and UI/UX teams.
 
-**Contributions:**  
-- Built user interface from scratch using React and Ant Design.  
-- Integrated backend APIs and refactored components for better maintainability.  
-- Worked closely with project managers and QA teams.
+**Stack:** React, TypeScript, Redux Toolkit, Tailwind CSS, Spring Boot, Oracle Database, Jenkins, GitLab CI
 
----
+### Internal investment tool · Bahana Sekuritas
 
-### 🔹 Online Cake Shop – PT. Agrinesia Raya  
-**Period:** Feb 2022 – Aug 2022  
-**Company:** Sagara Technology (Client)  
-**Role:** Frontend Developer (Part-Time)  
-**Tech Stack:** Next.js, Redux Toolkit
+Frontend Developer, part-time via Sagara Technology (Dec 2022 – Aug 2023)
 
-**Description:**  
-An online store that helps buyers find nearby cake shops integrated with delivery services.
+- Built the interface from scratch for a tool that tracks investments and projects profit and loss.
+- Integrated backend APIs and worked with the project manager and QA team.
 
-**Contributions:**  
-- Developed reusable and modular components using Next.js.  
-- Optimized performance and SEO with server-side rendering and static generation.  
-- Collaborated with backend teams for API integration.
+**Stack:** React, Redux Toolkit, Ant Design
 
----
+### Online cake shop · Agrinesia Raya
 
-### 🔹 PPOB Webview – PT. RUMA (Mapan)  
-**Period:** Sep 2021 – Jan 2022  
-**Role:** Frontend Developer (Part-Time)  
-**Tech Stack:** React.js, Redux, Appsflyer
+Frontend Developer, part-time via Sagara Technology (Feb 2022 – Aug 2022)
 
-**Description:**  
-A webview application for Payment Point Online Bank (PPOB) services with an admin dashboard.
+- Built a store that finds the nearest cake shop and hands orders to a delivery service.
+- Used Next.js server-side rendering and static generation for performance and SEO.
 
-**Contributions:**  
-- Built two frontend projects (customer and admin) from scratch.  
-- Created technical documentation for developer onboarding.  
-- Integrated Appsflyer and implemented Android native app permissions.
+**Stack:** Next.js, Redux Toolkit
 
----
+### PPOB webview · RUMA (Mapan)
 
-### 🔹 PasarID – PT. Bank Rakyat Indonesia  
-**Period:** Oct 2020 – May 2021  
-**Role:** Frontend Developer (Part-Time)  
-**Tech Stack:** React.js, Google Maps API
+Frontend Developer, part-time via Sagara Technology (Sep 2021 – Jan 2022)
 
-**Description:**  
-A marketplace website that simplifies transactions by allowing users to order goods online and track delivery.
+- Built two apps from scratch: the customer webview for bill payments and top-ups, and the admin dashboard.
+- Handled Android native permissions and integrated AppsFlyer.
+- Wrote technical documentation for developer onboarding.
 
-**Contributions:**  
-- Built and revamped the website interface for general users.  
-- Integrated Google Maps API for location tracking and delivery system.  
-- Maintained and added new features based on user needs.
+**Stack:** React, Redux, AppsFlyer
 
----
+### PasarID · Bank Rakyat Indonesia
 
-## 🔗 Contact & Links
+Frontend Developer, part-time via Sagara Technology (Oct 2020 – May 2021)
 
-- 📧 Email: anggarpujianto3@gmail.com  
-- 💼 LinkedIn: [Anggar Pujianto](https://www.linkedin.com/in/anggar-pujianto-511569275)  
-- 💻 GitHub: [Anggar@Github](https://github.com/anggaaaaaaaaaaar)  
+- Built a site where people order from traditional markets and get it delivered by courier.
+- Integrated Google Maps for market locations and delivery tracking, then revamped the UI and added features.
 
----
+**Stack:** React, Google Maps API
 
-*Thank you for visiting my portfolio! Feel free to reach out if you'd like to collaborate or learn more.*
+### Software QA Tester · PT Enigma Cipta Humanika
+
+Placed at PT Mekar Investama Sampoerna (Feb 2021 – Feb 2023)
+
+- Wrote test plans, test cases and test scripts, and tracked defects through to resolution with developers.
+
+## Skills
+
+- **Frontend:** React, Next.js, TypeScript, Redux Toolkit, Tailwind CSS, Ant Design
+- **Backend:** Java, Spring Boot, REST API, Go, Oracle Database
+- **DevOps:** Docker, Jenkins, GitLab CI/CD
+
+## Education
+
+Bachelor of Information Systems, Universitas AMIKOM Yogyakarta (2015 – 2019), GPA 3.49/4.00
+
+## About this repo
+
+The website is plain HTML and CSS served by GitHub Pages, with no build step.
+
+- `index.html` and `assets/style.css`: the website
+- `cv.html`: source for the CV PDF
+- `scripts/render.js`: regenerates `assets/Anggar-Pujianto-CV.pdf` and the link preview image `assets/og.png`. Run `node scripts/render.js` after editing `cv.html` (needs Playwright).
