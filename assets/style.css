@@ -90,8 +90,12 @@ li::marker { color: var(--faint); }
 
 .stack { font-size: .85rem; color: var(--muted); margin-top: .6rem; }
 
-.project { margin-top: 1.25rem; }
-.project .when { color: var(--faint); }
+/* Sagara: one employer, several client projects grouped under it. */
+.sub { font-family: var(--sans); font-size: .85rem; font-weight: 500; margin: 1rem 0 .5rem; }
+.projects { list-style: none; margin: 0; padding: 0 0 0 1.1rem; border-left: 1px solid var(--line); }
+.projects li { margin: 0; }
+.projects li + li { margin-top: 1.1rem; }
+.projects .when { text-align: left; padding: 0; margin: 0 0 .2rem; }
 
 .skills { margin: 0; }
 .skills .row + .row { margin-top: .6rem; }
@@ -132,6 +136,6 @@ footer {
   a[data-print]::after { content: attr(data-print); font-size: 10pt; }
   h2 { margin-top: 1.75rem; margin-bottom: .75rem; }
   .job { margin-bottom: 1.5rem; break-inside: avoid-page; }
-  .project { break-inside: avoid; }
+  .projects li { break-inside: avoid; }
   .cv, footer { display: none; }
 }
