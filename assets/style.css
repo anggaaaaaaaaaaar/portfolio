@@ -1,18 +1,24 @@
 :root {
-  --bg: #fbfaf7;
-  --text: #1d1d1b;
-  --muted: #66645e;
-  --line: #e4e1d9;
+  --bg: #fbfbfa;
+  --text: #1b1d20;
+  --muted: #5d6167;
+  --faint: #8a8e94;
+  --line: #e2e3e5;
   --link: #1f5f8b;
+  --rail: 9rem;
+  --gap: 2.25rem;
+  --serif: "Source Serif 4", Charter, "Iowan Old Style", Georgia, serif;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   color-scheme: light dark;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #161615;
-    --text: #e8e6e1;
-    --muted: #9b988f;
-    --line: #2f2e2b;
+    --bg: #141517;
+    --text: #e4e5e7;
+    --muted: #a2a6ac;
+    --faint: #767a80;
+    --line: #2b2d31;
     --link: #8cc3e8;
   }
 }
@@ -21,94 +27,115 @@
 
 body {
   margin: 0 auto;
-  max-width: 44rem;
-  padding: 4rem 1.25rem 3rem;
+  max-width: calc(var(--rail) + var(--gap) + 38rem + 2.5rem);
+  padding: 5rem 1.25rem 3rem;
   background: var(--bg);
   color: var(--text);
-  font: 17px/1.6 Charter, "Bitstream Charter", "Iowan Old Style", Georgia, serif;
+  font: 17px/1.6 var(--serif);
+  font-optical-sizing: auto;
+  -webkit-text-size-adjust: 100%;
 }
 
-h1, h2, h3, h4, .role, .when, .stack, .links, dt {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-}
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; }
+.role, .when, .stack, .links, dt { font-family: var(--sans); }
 
-h1 { font-size: 2rem; margin: 0; line-height: 1.2; }
-h2 {
-  font-size: .8rem;
-  text-transform: uppercase;
-  letter-spacing: .08em;
-  color: var(--muted);
-  margin: 3.5rem 0 1.25rem;
-  padding-bottom: .4rem;
-  border-bottom: 1px solid var(--line);
-}
-h3 { font-size: 1.05rem; margin: 0; }
-h4 { font-size: .95rem; margin: 0 0 .2rem; }
+h1 { font-size: 2.5rem; line-height: 1.1; letter-spacing: -.01em; margin: 0; }
+h2 { font-size: 1.35rem; line-height: 1.3; margin: 4rem 0 1.5rem; }
+h3 { font-size: 1.1rem; line-height: 1.35; margin: 0; }
+h4 { font-size: 1rem; line-height: 1.4; margin: 0 0 .15rem; }
 
-a { color: var(--link); text-underline-offset: 2px; }
+p { margin: 0; }
 
-.role { color: var(--muted); margin: .25rem 0 1.5rem; }
+a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; border-radius: 2px; }
+
+.intro > p:not(.role) { max-width: 38rem; }
+.role { color: var(--muted); font-size: 1.05rem; margin: .5rem 0 1.75rem; }
 
 .links {
   list-style: none;
   padding: 0;
+  margin: 1.75rem 0 0;
   display: flex;
   flex-wrap: wrap;
   gap: .5rem 1.5rem;
   font-size: .95rem;
 }
+.links .cv a { font-weight: 500; }
 
-.job { margin-bottom: 2.5rem; }
-.job-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-.when { color: var(--muted); font-size: .85rem; font-weight: normal; margin: 0; white-space: nowrap; }
-h4 .when { margin-left: .5rem; }
-.what { color: var(--muted); margin: .25rem 0 .5rem; }
-
-ul { padding-left: 1.2rem; margin: .5rem 0; }
-li { margin-bottom: .3rem; }
-ul.plain { list-style: none; padding: 0; }
-
-.stack { font-size: .85rem; color: var(--muted); margin: .5rem 0 0; }
-
-.project { margin: 1rem 0 0; }
-.project p { margin: 0; }
-
-.skills {
+/* Each entry: date (or label) on the left rail, content on the right. */
+.row {
   display: grid;
-  grid-template-columns: 7rem 1fr;
-  gap: .5rem 1rem;
-  margin: 0;
+  grid-template-columns: var(--rail) minmax(0, 1fr);
+  column-gap: var(--gap);
 }
-.skills dt { font-size: .9rem; font-weight: 600; padding-top: .1rem; }
-.skills dd { margin: 0; }
+.when, dt {
+  margin: 0;
+  padding-top: .2rem;
+  text-align: right;
+  font-size: .85rem;
+  line-height: 1.5;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.job { margin-bottom: 2.75rem; }
+.what { color: var(--muted); margin: .2rem 0 .6rem; }
+
+ul { padding-left: 1.15rem; margin: .5rem 0; }
+li { margin-bottom: .35rem; }
+li::marker { color: var(--faint); }
+
+.stack { font-size: .85rem; color: var(--muted); margin-top: .6rem; }
+
+/* Sagara: one employer, several client projects grouped under it. */
+.sub { font-family: var(--sans); font-size: .85rem; font-weight: 500; margin: 1rem 0 .5rem; }
+.projects { list-style: none; margin: 0; padding: 0 0 0 1.1rem; border-left: 1px solid var(--line); }
+.projects li { margin: 0; }
+.projects li + li { margin-top: 1.1rem; }
+.projects .when { text-align: left; padding: 0; margin: 0 0 .2rem; }
+
+.skills { margin: 0; }
+.skills .row + .row { margin-top: .6rem; }
+dt { color: var(--text); font-weight: 500; }
+dd { margin: 0; }
+
+.degree { margin-bottom: 1rem; }
+.course { margin-top: .35rem; }
+.course .when { padding-top: .15rem; }
 
 footer {
-  margin-top: 4rem;
-  padding-top: 1rem;
+  margin-top: 4.5rem;
+  padding-top: 1.25rem;
   border-top: 1px solid var(--line);
   color: var(--muted);
 }
 
-@media (max-width: 30rem) {
-  body { padding-top: 2.5rem; font-size: 16px; }
-  .skills { grid-template-columns: 1fr; gap: 0; }
-  .skills dd { margin-bottom: .75rem; }
+/* Desktop and print: line headings and intro up with the content column. */
+@media (min-width: 48rem), print {
+  .intro, h2, footer { margin-left: calc(var(--rail) + var(--gap)); }
+}
+
+@media screen and (max-width: 47.99rem) {
+  body { padding-top: 3rem; font-size: 16px; }
+  h1 { font-size: 2rem; }
+  h2 { margin-top: 3.25rem; }
+  .row { grid-template-columns: 1fr; }
+  .when, dt { text-align: left; padding-top: 0; margin-bottom: .1rem; }
+  .job { margin-bottom: 2.25rem; }
+  .course { margin-top: .75rem; }
 }
 
 @media print {
-  body { padding: 0; max-width: none; font-size: 10.5pt; background: none; }
+  :root { --rail: 8.5rem; --gap: 1.5rem; }
+  body { padding: 0; max-width: none; font-size: 10.5pt; background: none; color: #000; }
   a { color: inherit; text-decoration: none; }
   a[data-print] { font-size: 0; }
   a[data-print]::after { content: attr(data-print); font-size: 10pt; }
-  .role { margin-bottom: 1rem; }
-  h2 { margin: 1.75rem 0 .75rem; }
+  h2 { margin-top: 1.75rem; margin-bottom: .75rem; }
   .job { margin-bottom: 1.5rem; break-inside: avoid-page; }
-  .project { break-inside: avoid; }
+  .projects li { break-inside: avoid; }
   .cv, footer { display: none; }
 }

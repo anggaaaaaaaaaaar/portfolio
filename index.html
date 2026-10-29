@@ -15,12 +15,15 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
   <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <header class="intro">
     <h1>Anggar Pujianto</h1>
-    <p class="role">Software developer · Jakarta</p>
+    <p class="role">Software developer in Jakarta</p>
     <p>
       I build web apps end to end: React on the front, Java Spring Boot on the back.
       Since 2023 I've worked on Avantrade, a wealth management platform at Indivara Group,
@@ -40,97 +43,109 @@
     <section aria-labelledby="exp">
       <h2 id="exp">Experience</h2>
 
-      <article class="job">
-        <div class="job-head">
+      <article class="row job">
+        <p class="when">Jul 2024 – now</p>
+        <div>
           <h3>Product Specialist, Indivara Group</h3>
-          <p class="when">Jul 2024 – now</p>
+          <p class="what">Avantrade, a wealth management system used by financial institutions for investment and asset management.</p>
+          <ul>
+            <li>Shipped eKYC (electronic Know Your Customer) so new users verify themselves online, which sped up onboarding and reduced manual verification by the ops team.</li>
+            <li>Built the payment module with digital wallet integration. Each wallet provider sits behind a shared interface, so adding a new one means writing an adapter rather than touching the core flow.</li>
+            <li>Wrote and maintained Spring Boot services and REST APIs used by several internal systems.</li>
+            <li>Built React screens for the client-facing app.</li>
+            <li>Set up release pipelines in Jenkins and GitLab CI, and wrote scripts to automate data and system migrations.</li>
+            <li>Wrote technical specification documents and worked with business, ops and engineering to scope features.</li>
+          </ul>
+          <p class="stack">Spring Boot, React, Oracle DB, Jenkins, GitLab CI</p>
         </div>
-        <p class="what">Avantrade, a wealth management system used by financial institutions for investment and asset management.</p>
-        <ul>
-          <li>Shipped eKYC (electronic Know Your Customer) so new users verify themselves online, which sped up onboarding and reduced manual verification by the ops team.</li>
-          <li>Built the payment module with digital wallet integration. Each wallet provider sits behind a shared interface, so adding a new one means writing an adapter rather than touching the core flow.</li>
-          <li>Wrote and maintained Spring Boot services and REST APIs used by several internal systems.</li>
-          <li>Built React screens for the client-facing app.</li>
-          <li>Set up release pipelines in Jenkins and GitLab CI, and wrote scripts to automate data and system migrations.</li>
-          <li>Wrote technical specification documents and worked with business, ops and engineering to scope features.</li>
-        </ul>
-        <p class="stack">Spring Boot · React · Oracle DB · Jenkins · GitLab CI</p>
       </article>
 
-      <article class="job">
-        <div class="job-head">
+      <article class="row job">
+        <p class="when">Apr 2023 – Jan 2024</p>
+        <div>
           <h3>Frontend Developer, Indivara Group</h3>
-          <p class="when">Apr 2023 – Jan 2024</p>
+          <p class="what">Avantrade, same product as above.</p>
+          <ul>
+            <li>Started the Avantrade frontend from an empty repo with React, Redux Toolkit and Tailwind CSS.</li>
+            <li>Worked with business analysts to define application flows before they went to development.</li>
+            <li>Reviewed code, integrated APIs with the backend team, and wrote onboarding docs for new developers.</li>
+            <li>Helped the backend team build APIs in Spring Boot.</li>
+          </ul>
+          <p class="stack">React, TypeScript, Redux Toolkit, Tailwind CSS</p>
         </div>
-        <p class="what">Avantrade, same product as above.</p>
-        <ul>
-          <li>Started the Avantrade frontend from an empty repo with React, Redux Toolkit and Tailwind CSS.</li>
-          <li>Worked with business analysts to define application flows before they went to development.</li>
-          <li>Reviewed code, integrated APIs with the backend team, and wrote onboarding docs for new developers.</li>
-          <li>Helped the backend team build APIs in Spring Boot.</li>
-        </ul>
-        <p class="stack">React · TypeScript · Redux Toolkit · Tailwind CSS</p>
       </article>
 
-      <article class="job">
-        <div class="job-head">
+      <article class="row job">
+        <p class="when">Oct 2020 – Aug 2023</p>
+        <div>
           <h3>Frontend Developer (part-time), Sagara Technology</h3>
-          <p class="when">Oct 2020 – Aug 2023</p>
-        </div>
-        <p class="what">Contract work for several clients, mostly in finance.</p>
-
-        <div class="project">
-          <h4>Bahana Sekuritas · internal investment tool <span class="when">Dec 2022 – Aug 2023</span></h4>
-          <p>Built the frontend from scratch for a tool that tracks investments and projects profit and loss. React, Redux Toolkit, Ant Design.</p>
-        </div>
-        <div class="project">
-          <h4>Agrinesia Raya · online cake shop <span class="when">Feb 2022 – Aug 2022</span></h4>
-          <p>A store that finds the nearest cake shop and hands the order to a delivery service. Built reusable Next.js components and used server-side rendering and static generation for speed and SEO.</p>
-        </div>
-        <div class="project">
-          <h4>RUMA (Mapan) · PPOB webview <span class="when">Sep 2021 – Jan 2022</span></h4>
-          <p>Built two apps from scratch: the customer webview for bill payments and top-ups, and the admin dashboard for managing products and content. Handled Android permissions for the native app wrapper and integrated AppsFlyer.</p>
-        </div>
-        <div class="project">
-          <h4>Bank Rakyat Indonesia · PasarID <span class="when">Oct 2020 – May 2021</span></h4>
-          <p>Built a site where people order from traditional markets and get it delivered by courier, with Google Maps for market locations and delivery tracking. Later revamped the UI and added features.</p>
+          <p class="what">Contract work for several clients, mostly in finance.</p>
+          <p class="sub">Client projects</p>
+          <ul class="projects">
+            <li>
+              <h4>Internal investment tool for Bahana Sekuritas</h4>
+              <p class="when">Dec 2022 – Aug 2023</p>
+              <p>Built the frontend from scratch for a tool that tracks investments and projects profit and loss. React, Redux Toolkit, Ant Design.</p>
+            </li>
+            <li>
+              <h4>Online cake shop for Agrinesia Raya</h4>
+              <p class="when">Feb 2022 – Aug 2022</p>
+              <p>A store that finds the nearest cake shop and hands the order to a delivery service. Built reusable Next.js components and used server-side rendering and static generation for speed and SEO.</p>
+            </li>
+            <li>
+              <h4>PPOB webview for RUMA (Mapan)</h4>
+              <p class="when">Sep 2021 – Jan 2022</p>
+              <p>Built two apps from scratch: the customer webview for bill payments and top-ups, and the admin dashboard for managing products and content. Handled Android permissions for the native app wrapper and integrated AppsFlyer.</p>
+            </li>
+            <li>
+              <h4>PasarID for Bank Rakyat Indonesia</h4>
+              <p class="when">Oct 2020 – May 2021</p>
+              <p>Built a site where people order from traditional markets and get it delivered by courier, with Google Maps for market locations and delivery tracking. Later revamped the UI and added features.</p>
+            </li>
+          </ul>
         </div>
       </article>
 
-      <article class="job">
-        <div class="job-head">
+      <article class="row job">
+        <p class="when">Feb 2021 – Feb 2023</p>
+        <div>
           <h3>QA Tester, Enigma Cipta Humanika</h3>
-          <p class="when">Feb 2021 – Feb 2023</p>
+          <p class="what">Placed at Mekar Investama Sampoerna.</p>
+          <ul>
+            <li>Wrote test plans covering scope, schedule and estimates, then the test cases and scripts to go with them.</li>
+            <li>Logged and tracked bugs through to fix with the development team.</li>
+          </ul>
         </div>
-        <p class="what">Placed at Mekar Investama Sampoerna.</p>
-        <ul>
-          <li>Wrote test plans covering scope, schedule and estimates, then the test cases and scripts to go with them.</li>
-          <li>Logged and tracked bugs through to fix with the development team.</li>
-        </ul>
       </article>
     </section>
 
     <section aria-labelledby="skills">
       <h2 id="skills">Skills</h2>
       <dl class="skills">
-        <dt>Frontend</dt><dd>React, Next.js, TypeScript, Redux Toolkit, Tailwind CSS, Ant Design</dd>
-        <dt>Backend</dt><dd>Java Spring Boot, REST APIs, Go, Oracle DB</dd>
-        <dt>Delivery</dt><dd>Docker, Jenkins, GitLab CI, server deploys and log checks</dd>
-        <dt>Testing</dt><dd>Test plans, test cases, bug tracking</dd>
+        <div class="row"><dt>Frontend</dt><dd>React, Next.js, TypeScript, Redux Toolkit, Tailwind CSS, Ant Design</dd></div>
+        <div class="row"><dt>Backend</dt><dd>Java Spring Boot, REST APIs, Go, Oracle DB</dd></div>
+        <div class="row"><dt>Delivery</dt><dd>Docker, Jenkins, GitLab CI, server deploys and log checks</dd></div>
+        <div class="row"><dt>Testing</dt><dd>Test plans, test cases, bug tracking</dd></div>
       </dl>
     </section>
 
     <section aria-labelledby="edu">
       <h2 id="edu">Education</h2>
-      <div class="job-head">
-        <h3>B.S. Information Systems, Universitas AMIKOM Yogyakarta</h3>
+      <div class="row degree">
         <p class="when">2015 – 2019</p>
+        <div>
+          <h3>B.S. Information Systems, Universitas AMIKOM Yogyakarta</h3>
+          <p>GPA 3.49 / 4.00. Thesis: <i>Perahu Naga</i>, an offline Android game made in Unity.</p>
+        </div>
       </div>
-      <p>GPA 3.49 / 4.00. Thesis: <i>Perahu Naga</i>, an offline Android game made in Unity.</p>
-      <ul class="plain">
-        <li>Full Stack Programming, Enigmacamp (2020)</li>
-        <li>Cloud Computing, Digital Talent Scholarship by Kominfo (2020)</li>
-      </ul>
+      <div class="row course">
+        <p class="when">2020</p>
+        <p>Full Stack Programming, Enigmacamp</p>
+      </div>
+      <div class="row course">
+        <p class="when">2020</p>
+        <p>Cloud Computing, Digital Talent Scholarship by Kominfo</p>
+      </div>
     </section>
   </main>
 
